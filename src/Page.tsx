@@ -8,6 +8,7 @@ import {
 } from '@ant-design/icons';
 import React from 'react';
 import "./Page.css";
+import Charts from './Charts';
 
 const { Header, Sider, Content } = Layout;
 
@@ -55,7 +56,7 @@ class Page extends React.Component {
               padding: 24,
             }}
           >
-            Content
+            <Charts/>
           </Content>
         </Layout>
       </Layout>
