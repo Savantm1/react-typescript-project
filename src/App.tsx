@@ -1,14 +1,19 @@
 import React from 'react';
-import Page from './Page';
-import './App.css';
 import 'antd/dist/antd.css';
-
+import {BrowserRouter} from "react-router-dom"
+import AppRouter from './Components/AppRouter/AppRouter';
+import { Provider } from 'react-redux';
+import { store } from './Redux/store';
 
 function App() {
+
   return (
-    <div className="App">
-      <Page></Page>
-    </div>
+    <BrowserRouter>
+      <Provider store={store}>
+        <AppRouter/>
+      </Provider>
+    </BrowserRouter>
+
   );
 }
 
